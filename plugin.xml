@@ -2,38 +2,14 @@
 <?eclipse version="3.4"?>
 <plugin>
    <extension
-         id="org.palladiosimulator.hwsimcoupling.scheduler.ssh.ProcessorSharing"
-         name="SSH Processor Sharing Scheduler"
-         point="de.uka.ipd.sdq.scheduler">
-      <scheduler
-            class="org.palladiosimulator.hwsimcoupling.scheduler.ssh.SSHProcessorSharingSchedulerExtensionFactory">
-      </scheduler>
+         point="org.palladiosimulator.hwsimcoupling.hwsim">
+      <hwsim
+            class="org.palladiosimulator.hwsimcoupling.commands.ssh.CommandHandlerSSH"
+            name="ssh">
+      </hwsim>
    </extension>
    
-   <extension
-         id="org.palladiosimulator.hwsimcoupling.scheduler.ssh.Delay"
-         name="SSH Delay Scheduler"
-         point="de.uka.ipd.sdq.scheduler">
-      <scheduler
-            class="org.palladiosimulator.hwsimcoupling.scheduler.ssh.SSHDelaySchedulerExtensionFactory">
-      </scheduler>
-   </extension>
    
-   <extension
-         id="org.palladiosimulator.hwsimcoupling.scheduler.ssh.FCFS"
-         name="SSH FCFS Scheduler"
-         point="de.uka.ipd.sdq.scheduler">
-      <scheduler
-            class="org.palladiosimulator.hwsimcoupling.scheduler.ssh.SSHFCFSSchedulerExtensionFactory">
-      </scheduler>
-   </extension>
    
-    <extension
-         point="org.eclipse.emf.ecore.uri_mapping">
-      <mapping
-            source="pathmap://SSH_SCHEDULER_MODELS/"
-            target="platform:/plugin/org.palladiosimulator.hwsimcoupling.ssh/models/">
-      </mapping>
-   </extension>
 
 </plugin>

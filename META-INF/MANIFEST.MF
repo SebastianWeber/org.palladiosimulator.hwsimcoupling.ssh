@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: SSH Scheduler
-Bundle-SymbolicName: org.palladiosimulator.hwsimcoupling.ssh;singleton=true
+Bundle-SymbolicName: org.palladiosimulator.hwsimcoupling.ssh;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Automatic-Module-Name: org.palladiosimulator.hwsimcoupling.ssh
 Bundle-RequiredExecutionEnvironment: JavaSE-11

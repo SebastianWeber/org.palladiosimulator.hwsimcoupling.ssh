@@ -12,7 +12,11 @@ import org.palladiosimulator.hwsimcoupling.consumers.ssh.DemandExtractor;
 import org.palladiosimulator.hwsimcoupling.consumers.ssh.ErrorDetector;
 import org.palladiosimulator.hwsimcoupling.util.CommandHandler;
 
-public class CommandHandlerSSH implements CommandHandler{
+public class CommandHandlerSSH extends CommandHandler{
+	
+	public CommandHandlerSSH() {
+		parameters = new String[] {"ip", "key", "user", "executable", "parameter"};
+	}
 
 	@Override
 	public CopyCommand getCopyCommand(Map<String, Serializable> parameterMap, String source_path) {
@@ -38,7 +42,5 @@ public class CommandHandlerSSH implements CommandHandler{
 	public ErrorConsumer getErrorConsumer() {
 		return new ErrorDetector();
 	}
-
-	
 	
 }
