@@ -31,7 +31,7 @@ public class SimulationCommandSSH extends CommandSSH implements SimulationComman
 		command.add("-i");
 		command.add(key);
 		command.add(user + "@" + ip);
-		command.add("chmod 700 " + executable + " && " + "perf stat -o stats.txt -e cycles -r 1000 ./" +  executable);
+		command.add("chmod 700 " + executable + " && " + "python3 execute_and_benchmark.py ./" +  executable);
 		for (String parameter : parameters.split(" ")) {
 			command.add(parameter);
 		}
