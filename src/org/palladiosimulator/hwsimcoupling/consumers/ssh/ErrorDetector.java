@@ -10,7 +10,6 @@ public class ErrorDetector implements ErrorConsumer {
 		if (t.contains("Error")) {
 			throw new DemandCalculationFailureException(t);
 		}
-		
 	}
 	
 }
